@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Text } from 'react-native';
+
 
 class LibraryList extends Component {
-
-  constructor() {
-    super();
-  }
-
   render() {
+    return (
+      <Text> TOTO </Text>
+    );
   }
 }
 
-export default connect()(LibraryList);
+const mapStateToProps = (state) => {
+  return { libraries: state.libraries };
+};
+
+export default connect(mapStateToProps)(LibraryList);
